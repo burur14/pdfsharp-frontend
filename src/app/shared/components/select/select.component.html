@@ -1,0 +1,22 @@
+<div class="select">
+  <div class="select__header">
+    <h4 class="select__header-text">{{ name | translate}}</h4>
+    <button class="select__header-chevron-button" (click)="toggleSelect()">
+      <!-- <fa v-if="!isSelectOpen" :icon="['fa', 'chevron-down']"/> -->
+      <fa-icon *ngIf="!isSelectOpen" [icon]="['fas', 'chevron-down']" size="lg"></fa-icon>
+      <fa-icon *ngIf="isSelectOpen" [icon]="['fas', 'chevron-up']" size="lg"></fa-icon>
+      <!-- <fa v-else :icon="['fa', 'chevron-up']" size="lg" /> -->
+    </button>
+  </div>
+  <div class="select__body" [hidden]="!isSelectOpen">
+    <app-button class="button_select-body" (click)="addItem()">
+      {{ addItemText | translate}}
+    </app-button>
+    <div class="select__body-items">
+      <app-item *ngFor="let item of items" 
+        [item]="item"
+        (deleteItemEvent)="deleteItem($event)"
+      ></app-item>
+    </div>
+  </div>
+</div>

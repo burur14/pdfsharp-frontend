@@ -1,0 +1,20 @@
+<div class="project-item">
+  <div class="project-item__container">
+    <div class="project-item__header">
+      <h2 class="project-item__header-title">{{ project.name}}</h2>
+      <button class="item__header-button item__header-button--trash">
+        <fa-icon [icon]="['fas', 'trash']" size="lg"></fa-icon>
+      </button>
+    </div>
+    <div class="project-item__body">
+      <span class="file-info"></span>
+    </div>
+    <div class="project-item__footer">
+      <div class="button-container full-padding"></div>
+      <div class="button-container full-padding">
+        <app-button class="button button-upload" (click)="openProject(project.id)">{{ 'PROJECT.ITEM.OPEN' | translate
+          }}</app-button>
+      </div>
+    </div>
+  </div>
+</div>

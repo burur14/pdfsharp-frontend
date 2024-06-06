@@ -1,0 +1,21 @@
+<div class="add-image-popup">
+  <div class="add-image-popup__container">
+    <div class="add-image-popup__header">
+        <h2 class="add-image-popup__header-title">{{ 'PDF.ADD_IMAGE_POPUP.ADD_IMAGE' | translate }}</h2>
+        <app-cross-button (click)="closePopup()"></app-cross-button>
+    </div>
+    <div class="add-image-popup__messages">
+        <app-drop-zone (drop)="addImageFile($event)" (change)="selectImageFromExplorer($event)"></app-drop-zone>
+    </div>
+    <div class="add-image-popup__body">
+        <span class="file-info">{{ 'PDF.ADD_IMAGE_POPUP.FILE' | translate }} : {{ dropzoneFile?.name }}</span>
+    </div>
+    <div class="add-image-popup__footer">
+        <div class="button-container full-padding"></div>
+        <div class="button-container full-padding">
+            <app-button class="button button-upload" (click)="uploadFiles()">{{ 'PDF.ADD_IMAGE_POPUP.UPLOAD' | translate }}</app-button>
+        </div>
+    </div>
+  </div>
+  <div class="overlay" (click)="closePopup()"></div>
+</div>

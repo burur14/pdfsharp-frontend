@@ -1,0 +1,30 @@
+.welcome-page {
+  min-height: 700px;
+  padding: 70px 0px;
+  &__header {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 76px;
+    line-height: 1.25;
+    background: -webkit-linear-gradient(315deg, #9742d3 25%, #64ff88);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__subheader {
+    line-height: 1.5;
+    margin-top: 10px;
+    text-align: center;
+    color: #979797;
+    font-size: 18px;
+  }
+
+  &__actions {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

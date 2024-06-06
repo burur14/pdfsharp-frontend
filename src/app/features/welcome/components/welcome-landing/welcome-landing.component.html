@@ -1,0 +1,16 @@
+<div class="welcome-page">
+  <div class="container">
+    <h1 class="welcome-page__header">
+      {{ "WELCOME.HEADER" | translate }}
+    </h1>
+    <p class="welcome-page__subheader">
+      {{ "WELCOME.SUBHEADER" | translate }}
+    </p>
+    <div class="welcome-page__actions">
+      <app-button class="button_mr15"> {{ "WELCOME.PREVIEW" | translate }}
+      </app-button>
+      <app-button class="button_green button_mr15" (click)="goToProjectMenu()">{{ "WELCOME.GET_STARTED" | translate }}</app-button>
+      <app-button>{{ "WELCOME.ABOUT" | translate }}</app-button>
+    </div>
+  </div>
+</div>

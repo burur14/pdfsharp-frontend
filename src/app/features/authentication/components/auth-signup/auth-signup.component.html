@@ -1,0 +1,14 @@
+<div class="login-form">
+  <h3 class="login-form__subheader">{{ 'LOGIN.POPUP.NAME' | translate }}</h3>
+  <input class="login-form__input" [(ngModel)]="user.displayName" placeholder="Enter ..." type="text" />
+  <h3 class="login-form__subheader">{{ 'LOGIN.POPUP.EMAIL' | translate }}</h3>
+  <input class="login-form__input" [(ngModel)]="user.upn" placeholder="Enter ..." type="text" />
+  <h3 class="login-form__subheader">{{ 'LOGIN.POPUP.PASSWORD' | translate }}</h3>
+  <input class="login-form__input" [(ngModel)]="user.password" placeholder="Enter ..." type="text" />
+
+  <div class="login-form__buttons">
+    <a class="login-form__button-link" (click)="openLoginUp()">{{ 'LOGIN.POPUP.BACK_TO_LOGIN' | translate }}</a>
+    <app-button class="login-form__submit-button" (click)="signIn()">{{ 'LOGIN.POPUP.SUBMIT' | translate }}</app-button>
+  </div>
+
+</div>

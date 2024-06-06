@@ -1,0 +1,25 @@
+.header {
+    height: 55px;
+    width: 100%;
+    border-bottom: 1px solid #363636;
+    display: flex;
+    align-items: center;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 1140px;
+    }
+    &__box {
+        display: flex;
+        align-items: center;
+    }
+    &__logo {
+        width: 200px;
+        color: white;
+    }
+    &__user {
+        width: 100px;
+        color: white;
+    }
+}

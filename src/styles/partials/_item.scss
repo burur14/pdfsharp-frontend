@@ -1,0 +1,82 @@
+app-item:not(:first-child) {
+    margin-top: 10px;
+}
+
+app-item{
+    display: block;
+}
+
+.item {
+    &__header {
+        padding: 12px 16px;
+        background-color: #1d1d1d;
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__header-text {
+        color: #fff;
+    }
+
+    &__header-button {
+        color: #fff;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    &__header-button:not(:last-child) {
+        margin-right: 10px;
+    }
+
+    &__header-button--trash {
+        color: #901414;
+    }
+
+    &__header-button--chevron {
+        color: #fff;
+    }
+
+    &__body {
+        padding: 12px 16px;
+        background-color: #282828;
+    }
+
+    &__body-property {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__body-property:not(:first-child) {
+        margin-top: 5px;
+    }
+
+    &__body-property-name {
+        color: #fff;
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+    &__body-property-value {
+        width: 50px;
+        border-radius: 5px;
+        border: 1px solid #fff;
+        color: #fff;
+        background-color: transparent;
+        padding: 5px;
+        font-weight: 600;
+        font-size: 16px;
+        text-align: center;
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}

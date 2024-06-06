@@ -1,0 +1,46 @@
+<div class="item">
+  <div class="item__header">
+      <h4 class="item__header-text">{{ item.name }}</h4>
+      <div class="item__header-buttons">
+          <button class="item__header-button item__header-button--trash" (click)="deleteItem()">
+            <fa-icon [icon]="['fas', 'trash']" size="lg"></fa-icon>
+          </button>
+          <button class="item__header-button item__header-button--chevron" (click)="toggleItem()">
+            <fa-icon *ngIf="item.isHidden; else chevronUp" [icon]="['fas', 'chevron-down']" size="lg"></fa-icon>
+            <ng-template #chevronUp>
+              <fa-icon [icon]="['fas', 'chevron-up']" size="lg"></fa-icon>
+            </ng-template>          
+          </button>
+      </div>
+  </div>
+  <div class="item__body" [hidden]="item.isHidden">
+      <div class="item__body-property">
+          <p class="item__body-property-name"> {{ "PDF.ITEM.X" | translate }} </p>
+          <input class="item__body-property-value" type="number" [(ngModel)]="item.xPos"/>
+      </div>
+      <div class="item__body-property">
+          <p class="item__body-property-name"> {{ "PDF.ITEM.Y" | translate }} </p>
+          <input class="item__body-property-value" type="number" [(ngModel)]="item.yPos"/>
+      </div>
+      <div class="item__body-property">
+          <p class="item__body-property-name"> {{ "PDF.ITEM.ROTATION" | translate }} </p>
+          <input class="item__body-property-value" type="number" [(ngModel)]="item.rotation"/>
+      </div>
+      <div class="item__body-property" *ngIf="isTextItem(item)">
+          <p class="item__body-property-name"> {{ "PDF.ITEM.FONT_SIZE" | translate }} </p>
+          <input class="item__body-property-value" type="number" [(ngModel)]="$any(item).fontSize"/>
+      </div>
+      <div class="item__body-property" *ngIf="isImageItem(item)">
+          <p class="item__body-property-name"> {{ "PDF.ITEM.OPACITY" | translate }} </p>
+          <input class="item__body-property-value" type="number" [(ngModel)]="$any(item).opacity"/>
+      </div>
+      <div class="item__body-property" *ngIf="isImageItem(item)">
+          <p class="item__body-property-name"> {{ "PDF.ITEM.WIDTH" | translate }} </p>
+          <input class="item__body-property-value" type="number" [(ngModel)]="$any(item).imageWidth"/>
+      </div>
+      <div class="item__body-property" *ngIf="isImageItem(item)">
+          <p class="item__body-property-name"> {{ "PDF.ITEM.HEIGHT" | translate }} </p>
+          <input class="item__body-property-value" type="number" [(ngModel)]="$any(item).imageHeight"/>
+      </div>
+  </div>
+</div>

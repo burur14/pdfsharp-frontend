@@ -1,0 +1,14 @@
+<div class="explorer-page">
+    <app-explorer-sidebar class="explorer-page__sidebar"
+    (addNewProjectEvent)="openAddNewProjectModal()"
+    ></app-explorer-sidebar>
+
+    <app-explorer-projects class="explorer-page__view"
+    [projects]="projects"
+    ></app-explorer-projects>
+</div>
+
+<app-add-new-project-modal *ngIf="isAddNewProjectModalVisible"
+    (closePopupEvent)="closeAddNewProjectModal()"
+></app-add-new-project-modal>
+

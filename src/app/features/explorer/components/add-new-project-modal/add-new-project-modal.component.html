@@ -1,0 +1,21 @@
+<div class="add-new-project">
+  <div class="add-new-project__container">
+    <div class="add-new-project__header">
+        <h2 class="add-new-project__header-title">{{ 'PROJECT.EXPLORER.POPUP.ADD_DOCUMENT' | translate }}</h2>
+        <app-cross-button (click)="closePopup()"></app-cross-button>
+    </div>
+    <div class="add-new-project__messages">
+        <app-drop-zone (drop)="addImageFile($event)" (change)="selectImageFromExplorer($event)"></app-drop-zone>
+    </div>
+    <div class="add-new-project__body">
+        <span class="file-info">{{ 'PDF.ADD_IMAGE_POPUP.FILE' | translate }} : {{ dropzoneFile?.name }}</span>
+    </div>
+    <div class="add-new-project__footer">
+        <div class="button-container full-padding"></div>
+        <div class="button-container full-padding">
+            <app-button class="button button-upload" (click)="createNewProject()">{{ 'PDF.ADD_IMAGE_POPUP.UPLOAD' | translate }}</app-button>
+        </div>
+    </div>
+  </div>
+  <div class="overlay" (click)="closePopup()"></div>
+</div>

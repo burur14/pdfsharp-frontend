@@ -1,0 +1,13 @@
+<div 
+    class="dropzone"
+    [class.active-dropzone]="active"
+    (dragenter)="toggleActive()"
+    (dragleave)="toggleActive()"
+    (dragover)="$event.preventDefault()"
+    (drop)="toggleActive()"
+>
+    <span>Drag or Drop File</span>
+    <span>OR</span>
+    <label for="dropzoneFile">Select File</label>
+    <input type="file" id="dropzoneFile" class="dropzoneFile" />
+</div>

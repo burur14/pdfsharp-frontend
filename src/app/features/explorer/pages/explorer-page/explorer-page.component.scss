@@ -1,0 +1,15 @@
+.explorer-page {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    height: calc(100vh - 55px);
+
+    &__sidebar {
+        width: 320px;
+    }
+
+    &__view {
+        // 100% - width of sidebar
+        width: calc(100vw - 320px);
+    }
+}

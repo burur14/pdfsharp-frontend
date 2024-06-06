@@ -1,0 +1,39 @@
+.button {
+    padding: 8px 18px;
+    border-radius: 10px;
+    border: none;
+    background-color: #2f2f2f;
+    color: #83bba5;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.2s all;
+    cursor: pointer;
+    &:hover {
+        background-color: #3b3b3b;
+    }
+    &_green {
+        button {
+            background-color: #9742d3;
+            color: #cfcfcf;
+            &:hover {
+                background-color: #a549e7;
+            }
+        }
+    }
+    &_navbar {
+        button {
+            font-size: 11px;
+            margin-right: 15px;
+        }
+    }
+    &_mr15 {
+        button {
+            margin-right: 15px;
+        }
+    }
+    &_select-body {
+        button {
+            width: 100%;
+        }
+    }
+}

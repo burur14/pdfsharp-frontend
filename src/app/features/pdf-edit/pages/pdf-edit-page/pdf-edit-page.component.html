@@ -1,0 +1,27 @@
+<div class="edit-page">
+  <app-pdf-items-sidebar class="edit-page__sidebar"
+    [textItems]="textItems"
+    [imageItems]="imageItems"
+    [selectedPageImages]="selectedPageImages"
+    (documentUploadedEvent)="convertToBase64($event)"
+    (saveChangesEvent)="saveChanges()"
+    (addImageEvent)="openAddImagePopup()"
+  ></app-pdf-items-sidebar>
+
+  <app-pdf-editor-view class="edit-page__editor"
+    [project]="project"
+    [textItems]="textItems"
+    [imageItems]="imageItems"
+    [selectedPageImages]="selectedPageImages"
+    [pageNum]="pageNum"
+    [isLoadingProject]="isLoadingProject"
+    [isLoadingImages]="isLoadingImages"
+    (updateSelectedImageItems)="updateSelectedItems()"
+    (setPageNumEvent)="pageChanged($event)"
+  ></app-pdf-editor-view>
+</div>
+
+<app-add-image-popup *ngIf="addImagePopupVisible"
+  (closePopupEvent)="closeAddImagePopup()"
+  (confirmPopupEvent)="addImageFromPopup($event)"
+></app-add-image-popup>

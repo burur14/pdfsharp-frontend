@@ -1,0 +1,6 @@
+<div class="project-items">
+  <app-project-item class="project-item" *ngFor="let project of projects"
+  [project]="project" 
+  (openProjectEvent)="openProjectById($event)"
+  ></app-project-item>
+</div>

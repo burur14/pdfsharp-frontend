@@ -1,0 +1,15 @@
+.project-items {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 15px;
+
+    .project-item{
+        width: 25%;
+    }
+    
+    .project-item:nth-child(n+5) {
+        margin-top: 20px;
+    }
+}

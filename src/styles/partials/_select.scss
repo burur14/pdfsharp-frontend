@@ -1,0 +1,38 @@
+app-select:not(:first-child) {
+    margin-top: 10px;
+}
+
+app-select{
+    display: block;
+}
+
+.select {
+    &__header {
+        padding: 12px 16px;
+        background-color: #1a1a1a;
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-text {
+            color: #fff;
+        }
+
+        &-chevron-button {
+            color: #fff;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+    }
+
+    &__body {
+        padding: 12px 16px;
+        background-color: #303030;
+
+        &-items {
+            margin-top: 15px;
+        }
+    }
+}
